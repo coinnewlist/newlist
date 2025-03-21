@@ -1,82 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NewList</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fafafa;
-    }
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 15px;
-      text-align: center;
-    }
-    .container {
-      padding: 20px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .crypto-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-    .crypto-table th, .crypto-table td {
-      border: 1px solid #ddd;
-      padding: 12px;
-      text-align: left;
-    }
-    .crypto-table th {
-      background-color: #f4f4f4;
-    }
-    .crypto-table tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinNewList/NewList</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h2 {
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 24px;
+        }
+        th, td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 2px solid #ddd;
+        }
+        th {
+            background-color: #f8f8f8;
+            font-weight: bold;
+        }
+        .up {
+            color: green;
+            font-weight: bold;
+        }
+        .down {
+            color: red;
+            font-weight: bold;
+        }
+        .crypto-icon {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+            margin-right: 12px;
+        }
+        .crypto-name {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+        .crypto-name span {
+            margin-left: 10px;
+            font-weight: normal;
+            font-size: 20px;
+            color: #666;
+        }
+        @media (max-width: 900px) {
+            table {
+                font-size: 18px;
+            }
+            th, td {
+                padding: 15px;
+            }
+            .crypto-icon {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>NewList</h1>
-  </header>
-  <div class="container">
-    <h2>Trending Crypto</h2>
-    <table class="crypto-table">
-      <thead>
-        <tr>
-          <th>Crypto</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Bitcoin (BTC)</td>
-          <td>$27,000</td>
-        </tr>
-        <tr>
-          <td>Ethereum (ETH)</td>
-          <td>$1,800</td>
-        </tr>
-        <tr>
-          <td>Binance Coin (BNB)</td>
-          <td>$230</td>
-        </tr>
-        <tr>
-          <td>Cardano (ADA)</td>
-          <td>$0.35</td>
-        </tr>
-        <tr>
-          <td>Solana (SOL)</td>
-          <td>$35</td>
-        </tr>
-      </tbody>
+
+<div class="container">
+    <h2>
+        <img src="https://avatars.githubusercontent.com/u/198788596?s=400&u=ac4377a892d8ced8eb20d8091325af5e7c8f24ad&v=4" alt="Logo" style="width: 40px; height: 40px; vertical-align: middle; margin-right: 10px;">
+        NewList
+    </h2>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>New</th>
+                <th>Market Cap</th>
+                <th>Price</th>
+                <th>1h %</th>
+                <th>24h %</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td class="crypto-name">
+                    <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" class="crypto-icon"> 
+                    Bitcoin <span>(BTC)</span>
+                </td>
+                <td>$1.71T</td>
+                <td>$86,424.21</td>
+                <td class="up">+0.12%</td>
+                <td class="down">-0.24%</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="crypto-name">
+                    <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" class="crypto-icon"> 
+                    Ethereum <span>(ETH)</span>
+                </td>
+                <td>$266.24B</td>
+                <td>$2,208.84</td>
+                <td class="down">-0.05%</td>
+                <td class="up">+2.57%</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td class="crypto-name">
+                    <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" class="crypto-icon"> 
+                    Tether <span>(USDT)</span>
+                </td>
+                <td>$142.75B</td>
+                <td>$0.9997</td>
+                <td class="up">+0.01%</td>
+                <td class="up">+0.02%</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td class="crypto-name">
+                    <img src="https://cryptologos.cc/logos/xrp-xrp-logo.png" class="crypto-icon"> 
+                    XRP <span>(XRP)</span>
+                </td>
+                <td>$136.00B</td>
+                <td>$2.34</td>
+                <td class="down">-0.30%</td>
+                <td class="down">-2.34%</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td class="crypto-name">
+                    <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.png" class="crypto-icon"> 
+                    Binance Coin <span>(BNB)</span>
+                </td>
+                <td>$84.39B</td>
+                <td>$592.46</td>
+                <td class="up">+0.08%</td>
+                <td class="down">-0.70%</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td class="crypto-name">
+                    <img src="https://cryptologos.cc/logos/solana-sol-logo.png" class="crypto-icon"> 
+                    Solana <span>(SOL)</span>
+                </td>
+                <td>$70.27B</td>
+                <td>$138.39</td>
+                <td class="down">-0.15%</td>
+                <td class="down">-1.77%</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td class="crypto-name">
+                    <img src="https://cryptologos.cc/logos/usd-coin-usdc-logo.png" class="crypto-icon"> 
+                    USD Coin <span>(USDC)</span>
+                </td>
+                <td>$58.11B</td>
+                <td>$0.9999</td>
+                <td class="up">+0.02%</td>
+                <td class="up">+0.01%</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td class="crypto-name">
+                    <img src="https://cryptologos.cc/logos/dogecoin-doge-logo.png" class="crypto-icon"> 
+                    Dogecoin <span>(DOGE)</span>
+                </td>
+                <td>$28.69B</td>
+                <td>$0.1939</td>
+                <td class="down">-0.50%</td>
+                <td class="down">-3.29%</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td class="crypto-name">
+                    <img src="https://cryptologos.cc/logos/cardano-ada-logo.png" class="crypto-icon"> 
+                    Cardano <span>(ADA)</span>
+                </td>
+                <td>$28.61B</td>
+                <td>$0.8150</td>
+                <td class="down">-0.12%</td>
+                <td class="down">-2.24%</td>
+            </tr>
+        </tbody>
     </table>
-  </div>
+</div>
+
 </body>
 </html>
+
 
